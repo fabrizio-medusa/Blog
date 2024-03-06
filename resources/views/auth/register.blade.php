@@ -33,6 +33,7 @@
                                 </div>
                                 <div class="col-12">
                                     <button type="submit" class="btn btn-primary">Registrati</button>
+                                    <p class="small mt-2">Se sei già registrato <a href="{{route('login')}}"> Clicca qui!</a> </p>
                                 </div>
                             </div>
                         </form>
