@@ -5,12 +5,11 @@
             <h1 class="mb-4">Crea un nuovo articolo</h1>
 
         <x-success />
-        <form action="{{ route ('article.store') }}" method="POST" enctype="multipart/form-data">
+        <form action="{{route('article.store')}}" method="POST" enctype="multipart/form-data">
             @csrf
-
             <div class="row g-3">
                 <div class="col-12">
-                    <label for="title" class="form-label">Titolo</label>
+                    <label for="title">Titolo</label>
                     <input type="text" name="title" id="title" value=" {{ old('title') }} " class="form-control @error('title') is-invalid @enderror">
                     @error('title') <span class="text-danger small"> {{ $message }}</span>@enderror
                 </div>
@@ -21,16 +20,17 @@
                 </div>
                 <div class="col-12">
                     <label for="categories">Categoria</label>
-                        <select name="categories" id="categories" class="form-control">
+                        <select name="category" id="category" class="form-control">
                             @foreach($categories as $category)
                                 <option value="{{$category->id}}">{{ucfirst($category->name)}}</option>
                             @endforeach
-                            @error('categories') <span class="text-danger small"> {{ $message }}</span>@enderror
+                            @error('category') <span class="text-danger small"> {{ $message }}</span>@enderror
                         </select>
                 </div>
                 <div class="col-12">
                     <label for="image">Immagine</label>
                     <input type="file" name="image" id="image" class="form-control">
+                    @error('image') <span class="text-danger small"> {{ $message }}</span>@enderror
                 </div>
                 <div class="col-12">
                     <label for="body">Corpo</label>
