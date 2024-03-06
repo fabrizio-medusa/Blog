@@ -20,6 +20,7 @@ use App\Http\Controllers\HomeController;
 Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
 
 Route::get('/article/create', [ArticleController::class, 'create'])->name('article.create');
+Route::post('/article/store', [ArticleController::class, 'store'])->name('article.store');
 Route::get('/article/index', [ArticleController::class, 'show'])->name('article.index');
 
 Route::get('categories/index', function () {

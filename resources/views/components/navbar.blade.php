@@ -21,6 +21,9 @@
                     href="{{ route('article.index')}}">Gestisti Articoli</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item"
+                    href="{{ route('article.create')}}">Inserisci Articolo</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item"
                     href="">Gestisti Categorie</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li>
