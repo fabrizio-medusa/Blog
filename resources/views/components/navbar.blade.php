@@ -38,10 +38,10 @@
           @else
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="/login">Accedi</a>
+              <a class="nav-link" href="/login"><i class="fa-solid fa-right-to-bracket fa-lg"></i> Accedi</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/register">Registrati</a>
+              <a class="nav-link" href="/register"><i class="fa-solid fa-key"></i> Registrati</a>
             </li>
           </ul>
           @endauth      
