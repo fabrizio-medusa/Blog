@@ -20,3 +20,24 @@
 .animate-on-load .col-md-3 {
     animation: slideInOblique 0.5s ease-out forwards;
 }
+
+.center-image {
+    max-width: auto;
+    max-height: 600px;
+    width: 100%;
+    height: auto;
+}
+
+.image-with-text {
+    font-size: 6rem;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.my-height {
+    max-height: 50%;
+}
