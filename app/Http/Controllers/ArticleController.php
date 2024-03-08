@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
+use App\Models\Category;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -13,12 +15,12 @@ class ArticleController extends Controller
      */
 
      public function __construct () {
-        $this->middleware('auth')->except('index', 'show');
+        $this->middleware('auth')->except('index', 'show', 'byCategory', 'byUser');
      }
 
     public function index()
     {
-        $articles = Article::class::orderBy('created_at', 'desc')->get();
+        $articles = Article::orderByDesc('created_at')->get();
         return view('article.index', compact('articles'));
     }
 
@@ -86,4 +88,18 @@ class ArticleController extends Controller
     {
         //
     }
+
+    public function byCategory(Category $category) {
+
+        $articles = $category->articles->sortByDesc('created_at');
+        return view('article.by-category', compact('category', 'articles'));
+    }
+
+    public function byUser(User $user) {
+
+        $articles = $user->articles->sortByDesc('created_at');
+        return view('article.by-user', compact('user', 'articles'));
+    }
+
+
 }

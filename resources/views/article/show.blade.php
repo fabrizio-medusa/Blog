@@ -13,7 +13,7 @@
                         <img src="{{Storage::url($article->image)}}" class="img-fluid my-3" alt="...">
                         <div class="text-center">
                             <h2>{{$article->subtitle}}</h2>
-                            <p>Scritto il {{$article->created_at->format('d/n/Y')}} da {{$article->user->name}}</p>
+                            <p>Scritto il {{$article->created_at->format('d/m/Y')}} da {{$article->user->name}}</p>
                         </div>
                 </div>
                 <hr>

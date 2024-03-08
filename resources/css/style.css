@@ -1,0 +1,22 @@
+.zoom-on-hover {
+    transition: transform 0.3s;
+}
+
+.zoom-on-hover:hover {
+    transform: scale(1.05);
+}
+
+@keyframes slideInOblique {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px) translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) translateY(0);
+    }
+}
+
+.animate-on-load .col-md-3 {
+    animation: slideInOblique 0.5s ease-out forwards;
+}
