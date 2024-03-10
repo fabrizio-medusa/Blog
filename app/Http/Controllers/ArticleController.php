@@ -54,7 +54,7 @@ class ArticleController extends Controller
             'user_id' => Auth::user()->id,
         ]);
 
-        return redirect(route('homepage'))->with('success', 'Articolo creato correttamente');
+        return redirect(route('home'))->with('success', 'Articolo creato correttamente');
     }
 
     /**
