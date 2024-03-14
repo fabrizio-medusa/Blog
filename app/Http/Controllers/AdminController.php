@@ -10,35 +10,32 @@ class AdminController extends Controller
     public function dashboard(){
 
         $adminRequests = User::where('is_admin', NULL)->get();
-        $revisoRequests = User::where('is_revisor', NULL)->get();
+        $revisorRequests = User::where('is_revisor', NULL)->get();
         $writerRequests = User::where('is_writer', NULL)->get();
 
-        return view('admin.dashboard', compact('adminRequest', 'revisorRequest', 'writerRequest'));
+        return view('admin.dashboard', compact('adminRequests', 'revisorRequests', 'writerRequests'));
     }
 
     public function setAdmin(User $user){
 
-        $user->update([
-            'is_admin' => true,
-        ]);
+        $user->is_admin = true;
+        $user->save();
 
         return redirect(route('admin.dashboard'))->with('message', 'Hai correttamente reso amministratore l\'utente scelto');
     }
 
     public function setRevisor(User $user){
 
-        $user->update([
-            'is_revisor' => true,
-        ]);
+        $user->is_revisor = true;
+        $user->save();
 
         return redirect(route('admin.dashboard'))->with('message', 'Hai correttamente reso revisore l\'utente scelto');
     }
 
     public function setWriter(User $user){
 
-        $user->update([
-            'is_writer' => true,
-        ]);
+        $user->is_write = true;
+        $user->save();
 
         return redirect(route('admin.dashboard'))->with('message', 'Hai correttamente reso redattore l\'utente scelto');
     }

@@ -26,7 +26,7 @@
         <div class="row justify-content-center">
             <div class="col-12">
                 <h2>Richieste per ruolo revisore</h2>
-                <x-requests-table :roleRequests="revisorRequests" role="revisore" />
+                <x-requests-table :roleRequests="$revisorRequests" role="revisore" />
             </div>
         </div>
     </div>

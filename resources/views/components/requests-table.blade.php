@@ -14,7 +14,32 @@
                 <td>{{$user->name}}</td>
                 <td>{{$user->email}}</td>
                 <td>
-                    <button class="btn btn-info text-white">Attiva {{$role}}</button>
+                    @switch($role)
+                        @case('amministratore')
+                            <form action="{{ route('admin.setAdmin', compact('user')) }}" method="POST">
+                                @csrf
+                                @method('patch')
+                                <button type="submit" class="btn btn-info text-white">Attiva {{$role}}</button>
+                            </form>
+                            @break
+
+                        @case('revisore')
+                            <form action="{{ route('admin.setRevisor', compact('user')) }}" method="POST">
+                                @csrf
+                                @method('patch')
+                                <button type="submit" class="btn btn-info text-white">Attiva {{$role}}</button>
+                            </form>
+                            @break
+                        @case('redattore')
+                            <form action="{{ route('admin.setWriter', compact('user')) }}" method="POST">
+                                @csrf
+                                @method('patch')
+                                <button type="submit" class="btn btn-info text-white">Attiva {{$role}}</button>
+                            </form>
+                            @break
+                            
+                    @endswitch
+                    
                 </td>
             </tr>
         @endforeach
