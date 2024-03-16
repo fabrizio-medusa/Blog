@@ -24,6 +24,10 @@
                       <li><a class="dropdown-item" href=" {{ route ('admin.dashboard') }} ">Dashboard Admin</a></li>
                       <li><hr class="dropdown-divider"></li>
                     @endif
+                    @if(Auth::user()->is_revisor)
+                      <li><a class="dropdown-item" href=" {{ route ('revisor.dashboard') }} ">Dashboard Revisor</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                    @endif
                   <li><a class="dropdown-item"
                     href="{{ route('article.create')}}">Inserisci Articolo</a></li>
                   <li><hr class="dropdown-divider"></li>

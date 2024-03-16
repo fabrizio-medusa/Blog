@@ -1,8 +1,8 @@
 <?php
 
 namespace App\Http\Middleware;
-use Illuminate\Support\Facades\Auth;
 
+use Illuminate\Support\Facades\Auth;
 use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -19,7 +19,7 @@ class UserIsAdmin
         if(Auth::user() && Auth::user()->is_admin){
             return $next($request);
         }
-        
+
         return redirect(route('home'))->with('danger', 'Non sei autorizzato');
     }
 }
