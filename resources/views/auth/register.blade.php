@@ -1,6 +1,6 @@
 <x-layout title="Registrati">
 
-    <div class="container-fluid p-0 position-relative">
+    <div class="container-fluid p-0 position-relative mb-5">
         <img src="{{ asset('images/banner-bg.png') }}" alt="The Aulab Post Background" class="img-fluid w-100">
         
         <div class="container position-absolute top-50 start-50 translate-middle">
@@ -11,15 +11,15 @@
                         <h1 class="display-4">The Aulab Post</h1>
                     </div>
                 </div>
-
+    
                 <div class="col-12 col-lg-4 my-auto pe-lg-5">
                     <div class="card">
                         <div class="card-header">
                             Registrati
                         </div>
                         <div class="card-body">
-                                <form action="/register" method="POST">
-                                    @csrf
+                            <form action="/register" method="POST">
+                                @csrf
                                 <div class="row g-3">
                                     <div class="col-12">
                                         <label for="name">Nome</label>
@@ -50,7 +50,9 @@
                         </div>
                     </div>
                 </div>
-            </div>            
-
+            </div>
+        </div>
+    </div>
+    
 
 </x-layout>

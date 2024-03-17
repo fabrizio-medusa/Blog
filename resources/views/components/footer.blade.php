@@ -1,4 +1,4 @@
-<footer id="bottom" class="row text-left p-4">
+<footer id="bottom" class="row text-left p-4 mt-5">
   <div class="col-12 col-md-4">
     <h2>Copyright &copy; The Aulab Post</h2>
     <h4>Iscriviti alla nostra newsletter</h4>
