@@ -9,6 +9,9 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href=" {{ route ('homepage') }} ">Home</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href=" {{ route ('careers') }} ">Lavora con noi</a>
+        </li>
       </ul>
         @auth
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
