@@ -55,7 +55,11 @@
               <a class="nav-link" href="/register"><i class="fa-solid fa-key"></i> Registrati</a>
             </li>
           </ul>
-          @endauth      
+          @endauth
+          <form class="d-flex" method="GET" action="{{ route('article.search') }}">
+            <input class="form-control me-2" type="search" placeholder="Cerca" aria-label="Search" name="query">
+            <button class="btn btn-outline-info" type="submit">Cerca</button>
+          </form>    
     </div>
   </div>
 </nav>
