@@ -1,9 +1,17 @@
 <x-layout>
-    <div class="container-fluid p-5 bg-info text-center text-white">
-        <div class="row justify-content-center">
-            <h1 class="display-1">
-                {{$article->title}}
-            </h1>
+
+    <div class="container-fluid p-0 position-relative">
+        <img src="{{ asset('images/banner-bg.png') }}" alt="The Aulab Post Background" class="img-fluid w-100">
+        
+        <div class="container-fluid p-5 text-center text-white position-absolute top-50 start-50 translate-middle">
+            <div class="row justify-content-center">
+                <div class="position-relative">
+                    <img src="{{ asset('images/banner-img.png') }}" alt="The Aulab Post" class="img-fluid center-image">
+                    <div class="display-4 display-md-2 display-lg-1 position-absolute top-50 start-50 translate-middle">
+                        {{$article->title}}
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 

@@ -50,7 +50,7 @@ class PublicController extends Controller
                 $user->is_revisor = NULL;
                 break;
 
-            case 'write':
+            case 'writer':
                 $user->is_writer = NULL;
                 break; 
         }
