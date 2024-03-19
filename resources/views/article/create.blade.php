@@ -2,7 +2,7 @@
     <div class="container mt-4">
         <div class="row">
             <div class="col-md-8 mx-auto">
-            <h1 class="mb-4">Crea un nuovo articolo</h1>
+            <h1 class="mb-4 mt-5">Crea un nuovo articolo</h1>
 
         <x-success />
         <form action="{{route('article.store')}}" method="POST" enctype="multipart/form-data">

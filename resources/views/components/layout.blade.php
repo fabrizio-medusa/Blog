@@ -11,13 +11,20 @@
     <title>The Aulab Post</title>
 </head>
 <body>
+
+    <div class="background-img">  
+        <x-navbar />
+
+
+            {{$slot}}
+
+
+
     
-    <x-navbar />
 
 
-    {{$slot}}
-
-
-   <x-footer />
+        <x-footer />
+    </div>
+    
 </body>
 </html>
