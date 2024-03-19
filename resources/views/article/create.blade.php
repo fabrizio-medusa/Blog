@@ -33,6 +33,12 @@
                     @error('image') <span class="text-danger small"> {{ $message }}</span>@enderror
                 </div>
                 <div class="col-12">
+                    <label for="tags">Tags</label>
+                    <input name="tags" id="tags" class="form-control" value="{{ old('tags') }}">
+                    <span class="small fst-italic">Dividi ogni tag con una virgola</span>
+                    @error('image') <span class="text-danger small"> {{ $message }}</span>@enderror
+                </div>
+                <div class="col-12">
                     <label for="body">Corpo</label>
                     <textarea name="body" id="body" rows="10" class="form-control">{{ old('body')}}</textarea>
                 </div>
