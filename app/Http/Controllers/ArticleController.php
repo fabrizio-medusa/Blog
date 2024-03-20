@@ -76,7 +76,7 @@ class ArticleController extends Controller
             $article->tags()->attach($newTag);
         }
 
-        return redirect(route('home'))->with('success', 'Articolo creato correttamente');
+        return redirect(route('article.create'))->with('success', 'Articolo creato correttamente');
     }
 
     /**

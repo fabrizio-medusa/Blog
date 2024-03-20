@@ -23,14 +23,19 @@
                             <p class="text-muted mt-2">Scritto il {{$article->created_at->format('d/m/Y')}}</p>
                             <h2 class="fs-4">{{$article->title}}</h2>
                             <h3 class="fs-5">{{$article->subtitle}}</h3>
-                            <a href="{{ route('article.byCategory', ['category' => $article->category->id]) }}" class="text-muted fst-italic text-capitalize text-decoration-none">{{$article->category->name}}</a>
-
+                            @if($article->category)
+                                <a href="{{ route('article.byCategory', ['category' => $article->category->id]) }}" class="text-muted fst-italic text-capitalize text-decoration-none">{{$article->category->name}}</a>
+                            @else
+                                <p class="small text-muted fst-italic text-capitalize ">
+                                    Non categorizzato
+                                </p>
+                            @endif   
                             <p class="small fst-italic text-capitalize">
                                 @foreach($article->tags as $tag)
                                     #{{$tag->name}}
                                 @endforeach
                             </p>
-                            
+
                         <div class="d-flex justify-content-between mt-4">
                             <ul class="list-unstyled d-flex">
                                 <li class="me-2"><a href="#"><i class="fa-brands fa-facebook fa-lg"></i></a></li>

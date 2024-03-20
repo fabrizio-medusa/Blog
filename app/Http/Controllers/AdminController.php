@@ -1,6 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Models\Category;
+use App\Models\Tag;
 use \App\Models\User;
 
 use Illuminate\Http\Request;
@@ -38,5 +41,54 @@ class AdminController extends Controller
         $user->save();
 
         return redirect(route('admin.dashboard'))->with('message', 'Hai correttamente reso redattore l\'utente scelto');
+    }
+
+    public function editTag(Request $request, Tag $tag){
+        $request->validate([
+            'name' => 'required|unique:tags',
+        ]);
+
+        $tag->update([
+            'name' => strtolower($request->name),
+        ]);
+
+        return redirect(route('admin.dashboard'))->with('success', 'Tag aggiornato');
+    }
+
+    public function deleteTag(Tag $tag){
+        foreach($tag->articles as $article){
+            $article->tags()->detach($tag);
+        }
+
+        $tag->delete();
+
+        return redirect(route('admin.dashboard'))->with('success', 'Tag eliminato');
+    }
+
+    public function editCategory(Request $request, Category $category){
+        $request->validate([
+            'name' => 'required|unique:categories',
+        ]);
+
+        $category->update([
+            'name' => strtolower($request->name),
+        ]);
+
+        return redirect(route('admin.dashboard'))->with('success', 'Categoria aggiornata');
+    }
+
+    public function deleteCategory(Category $category){
+
+        $category->delete();
+
+        return redirect(route('admin.dashboard'))->with('success', 'Categoria eliminata');
+    }
+
+    public function storeCategory(Request $request){
+        Category::create([
+            'name' => strtolower($request->name),
+        ]);
+
+        return redirect(route('admin.dashboard'))->with('success', 'Nuova categoria inserita');
     }
 }

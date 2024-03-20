@@ -36,7 +36,7 @@
                     <label for="tags">Tags</label>
                     <input name="tags" id="tags" class="form-control" value="{{ old('tags') }}">
                     <span class="small fst-italic">Dividi ogni tag con una virgola</span>
-                    @error('image') <span class="text-danger small"> {{ $message }}</span>@enderror
+                    @error('tags') <span class="text-danger small"> {{ $message }}</span>@enderror
                 </div>
                 <div class="col-12">
                     <label for="body">Corpo</label>
