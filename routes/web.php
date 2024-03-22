@@ -1,10 +1,11 @@
 <?php
 
-use App\Http\Controllers\ArticleController;
-use App\Http\Controllers\PublicController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\PublicController;
+use App\Http\Controllers\WriterController;
+use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\RevisorController;
 
 /*
@@ -65,6 +66,10 @@ Route::middleware('revisor')->group(function() {
 Route::middleware('writer')->group(function() {
     Route::post('/article/store', [ArticleController::class, 'store'])->name('article.store');
     Route::get('/article/create', [ArticleController::class, 'create'])->name('article.create');
+    Route::get('/writer/dashboard', [WriterController::class, 'dashboard'])->name('writer.dashboard');
+    Route::get('/article/{article}/edit', [ArticleController::class, 'edit'])->name('article.edit');
+    Route::get('/article/{article}/update', [ArticleController::class, 'update'])->name('article.update');
+
 
 });
 

@@ -31,6 +31,10 @@
                       <li><a class="dropdown-item" href=" {{ route ('revisor.dashboard') }} ">Dashboard Revisor</a></li>
                       <li><hr class="dropdown-divider"></li>
                     @endif
+                    @if(Auth::user()->is_writer)
+                      <li><a class="dropdown-item" href=" {{ route ('writer.dashboard') }} ">Dashboard del redattore</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                    @endif
                   <li><a class="dropdown-item"
                     href="{{ route('article.create')}}">Inserisci Articolo</a></li>
                   <li><hr class="dropdown-divider"></li>
