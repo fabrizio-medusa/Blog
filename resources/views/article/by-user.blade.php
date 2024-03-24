@@ -29,7 +29,9 @@
                                 <p class="small text-muted fst-italic text-capitalize ">
                                     Non categorizzato
                                 </p>
-                            @endif 
+                            @endif
+
+                            <p><span class="text-muted small fst-italic ">Tempo di lettura: {{$article->readDuration()}} min</span></p>
 
                             <p class="small fst-italic text-capitalize">
                                 @foreach($article->tags as $tag)

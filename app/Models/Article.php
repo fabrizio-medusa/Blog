@@ -18,8 +18,26 @@ class Article extends Model
         'image',
         'user_id',
         'category_id',
-        'is_accepeted',
+        'is_accepted',
+        'slug',
     ];
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
+
+    public function readDuration(){
+        $totalWords = str_word_count($this->body);
+        $minutesToRead = round($totalWords / 200);
+
+        if ($minutesToRead < 1) {
+            return "meno di 1 ";
+        }
+
+        return $minutesToRead . " minuto" . ($minutesToRead > 1 ? "i" : "");
+
+    }
 
     public function toSearchableArray()
     {
