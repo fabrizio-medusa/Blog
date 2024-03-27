@@ -1,3 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Sora:wght@100..800&display=swap');
+
+.my-font-title {
+    font-family: "Permanent Marker", cursive;
+    font-optical-sizing: auto;
+}
+
+.background-image {
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+  }
+
+.custom-width {
+    width: 75%;
+}
+
 #main {
     min-height: 600px; 
     background-color: red;

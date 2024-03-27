@@ -1,5 +1,11 @@
 <x-layout title="Accedi">
 
+
+
+
+
+
+
     <div class="container-fluid p-0 position-relative">
         <img src="{{ asset('images/banner-bg.png') }}" alt="The Aulab Post Background" class="img-fluid w-100">
         

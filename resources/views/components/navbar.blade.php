@@ -20,9 +20,6 @@
                   Benvenuto <strong>{{ auth()->user()->name }}</strong>!
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end">
-                  <li><a class="dropdown-item"
-                    href="{{ route('article.index')}}">Gestisti Articoli</a></li>
-                  <li><hr class="dropdown-divider"></li>
                     @if(Auth::user()->is_admin)
                       <li><a class="dropdown-item" href=" {{ route ('admin.dashboard') }} ">Dashboard Admin</a></li>
                       <li><hr class="dropdown-divider"></li>
@@ -34,13 +31,10 @@
                     @if(Auth::user()->is_writer)
                       <li><a class="dropdown-item" href=" {{ route ('writer.dashboard') }} ">Dashboard del redattore</a></li>
                       <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item"
+                        href="{{ route('article.create')}}">Inserisci Articolo</a></li>
+                      <li><hr class="dropdown-divider"></li>
                     @endif
-                  <li><a class="dropdown-item"
-                    href="{{ route('article.create')}}">Inserisci Articolo</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item"
-                    href="">Gestisti Categorie</a></li>
-                  <li><hr class="dropdown-divider"></li>
                   <li>
                     <form action="/logout" method="POST">
                       @csrf

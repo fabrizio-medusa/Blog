@@ -1,10 +1,12 @@
 <x-layout>
 
-    <div class="container-fluid p-5 bg-info text-center text-white">
-        <div class="row justify-content-center">
-            <h1 class="display-1">
-                Bentornato, Revisore
-            </h1>
+    <div class="container-fluid p-0 position-relative">
+        <img src="{{ asset('images/banner-bg.png') }}" alt="The Aulab Post Background" class="img-fluid w-100">
+        <div class="position-absolute top-50 start-50 translate-middle" style="width: 75%;">
+            <img src="{{ asset('images/banner-img.png') }}" alt="The Aulab Post" class="img-fluid">
+        </div>
+        <div class="position-absolute top-50 start-50 translate-middle text-center text-white" style="z-index: 1;">
+            <span class="display-4 my-font-title">Dashboard Revisore</span>
         </div>
     </div>
 
