@@ -6,10 +6,19 @@
     font-optical-sizing: auto;
 }
 
-.background-image {
+.first-container {
+    background-image: url('/storage/app/public/images/banner-bg.png');
     background-size: cover;
     background-position: center;
-    height: 100%;
+    padding: 50px;
+  }
+
+
+  .second-container {
+    background-image: url('/storage/app/public/images/banner-img.png');
+    background-size: cover;
+    background-position: center;
+    padding: 50px;
   }
 
 .custom-width {
@@ -92,5 +101,6 @@ div.img {
 .my-height {
     max-height: 50%;
 }
+
 
 

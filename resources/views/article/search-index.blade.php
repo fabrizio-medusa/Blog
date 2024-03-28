@@ -1,16 +1,11 @@
 <x-layout>
     <div class="container-fluid p-0 position-relative">
         <img src="{{ asset('images/banner-bg.png') }}" alt="The Aulab Post Background" class="img-fluid w-100">
-        
-        <div class="container-fluid p-5 text-center text-white position-absolute top-50 start-50 translate-middle">
-            <div class="row justify-content-center">
-                <div class="position-relative">
-                    <img src="{{ asset('images/banner-img.png') }}" alt="The Aulab Post" class="img-fluid center-image">
-                    <div class="display-4 display-md-2 display-lg-1 position-absolute top-50 start-50 translate-middle">
-                        The Aulab Post
-                    </div>
-                </div>
-            </div>
+        <div class="position-absolute top-50 start-50 translate-middle" style="width: 75%;">
+            <img src="{{ asset('images/banner-img.png') }}" alt="The Aulab Post" class="img-fluid">
+        </div>
+        <div class="position-absolute top-50 start-50 translate-middle text-center text-white" style="z-index: 1;">
+            <span class="display-4 my-font-title">The Aulab Post</span>
         </div>
     </div>
             
@@ -49,7 +44,11 @@
                         <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis</p>
                     </div>
                     </div>
-                 @endforeach   
-            </div>  
+                 @endforeach 
+            </div>
+            <div class="container d-flex justify-content-center">
+                {{ $articles->links() }}
+            </div>   
+            
 
 </x-layout>

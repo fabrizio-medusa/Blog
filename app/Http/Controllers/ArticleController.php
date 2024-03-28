@@ -29,7 +29,7 @@ class ArticleController extends Controller
 
         public function articleSearch(Request $request) {
             $query = $request->input('query');
-            $articles = Article::search($query)->where('is_accepted', true)->orderBy('created_at', 'desc')->get();
+            $articles = Article::search($query)->where('is_accepted', true)->orderBy('created_at', 'desc')->paginate(4);
 
             return view('article.search-index', compact('articles', 'query'));
         }
@@ -158,13 +158,13 @@ class ArticleController extends Controller
 
     public function byCategory(Category $category) {
 
-        $articles = $category->articles()->where('is_accepted', true)->sortByDesc('created_at');
+        $articles = $category->articles()->where('is_accepted', true)->orderByDesc('created_at')->paginate(4);
         return view('article.by-category', compact('category', 'articles'));
     }
 
     public function byUser(User $user) {
 
-        $articles = $user->articles()->where('is_accepted', true)->sortByDesc('created_at');
+        $articles = $user->articles()->where('is_accepted', true)->orderByDesc('created_at')->paginate(4);
         return view('article.by-user', compact('user', 'articles'));
     }
 

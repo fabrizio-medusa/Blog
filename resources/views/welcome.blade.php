@@ -51,8 +51,6 @@
         </div>
         @endforeach   
     </div>
-    
-    <!-- Paginazione di Bootstrap -->
     <div class="container d-flex justify-content-center">
         {{ $articles->links() }}
     </div>
