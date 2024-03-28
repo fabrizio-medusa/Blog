@@ -9,7 +9,7 @@
               </div>
               <div class="col-md-4">
                 <div class="card shadow-lg">
-                    <div class="card-header">
+                    <div class="card-header text-articles">
                         Accedi
                     </div>
                     <div class="card-body">
@@ -17,7 +17,7 @@
                             @csrf
                             <div class="row g-3">
                                 <div class="col-12 text-start">
-                                    <label for="email">
+                                    <label for="email" class="text-articles">
                                         <i class="fa-regular fa-envelope fa-xs"></i>
                                         Email
                                     </label>
@@ -25,7 +25,7 @@
                                     @error('email') <span class="text-danger small"> {{ $message }} </span>@enderror
                                 </div>
                                 <div class="col-12 text-start">
-                                    <label for="password">
+                                    <label for="password" class="text-articles">
                                         <i class="fa-solid fa-key fa-xs"></i>
                                         Password
                                     </label>
@@ -33,8 +33,8 @@
                                     @error('password') <span class="text-danger small"> {{ $message }} </span>@enderror
                                 </div>
                                 <div class="col-12 text-start">
-                                    <button type="submit" class="btn btn-primary">Accedi</button>
-                                    <p class="small mt-2">Non sei registrato <a href="{{route('register')}}">Clicca qui!</a></p>
+                                    <button type="submit" class="btn btn-primary text-articles">Accedi</button>
+                                    <p class="small mt-2 text-articles">Non sei registrato <a href="{{route('register')}}">Clicca qui!</a></p>
                                 </div>
                             </div>
                         </form>

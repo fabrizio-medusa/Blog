@@ -1,10 +1,10 @@
 <table class="table table-striped table-hover border">
     <thead class="table-dark">
         <tr>
-            <th scope="col">#</th>
-            <th scope="col">Nome</th>
-            <th scope="col">Email</th>
-            <th scope="col">Azioni</th>
+            <th scope="col" class="text-articles">#</th>
+            <th scope="col" class="text-articles">Nome</th>
+            <th scope="col" class="text-articles">Email</th>
+            <th scope="col" class="text-articles">Azioni</th>
         </tr>
     </thead>
     <tbody>
@@ -16,25 +16,25 @@
                 <td>
                     @switch($role)
                         @case('amministratore')
-                            <form action="{{ route('admin.setAdmin', compact('user')) }}" method="POST">
+                            <form action="{{ route('admin.setAdmin', compact('user')) }}" method="POST" class="text-articles">
                                 @csrf
                                 @method('patch')
-                                <button type="submit" class="btn btn-info text-white">Attiva {{$role}}</button>
+                                <button type="submit" class="btn btn-info text-white text-articles">Attiva {{$role}}</button>
                             </form>
                             @break
 
                         @case('revisore')
-                            <form action="{{ route('admin.setRevisor', compact('user')) }}" method="POST">
+                            <form action="{{ route('admin.setRevisor', compact('user')) }}" method="POST" class="text-articles">
                                 @csrf
                                 @method('patch')
-                                <button type="submit" class="btn btn-info text-white">Attiva {{$role}}</button>
+                                <button type="submit" class="btn btn-info text-white text-articles">Attiva {{$role}}</button>
                             </form>
                             @break
                         @case('redattore')
-                            <form action="{{ route('admin.setWriter', compact('user')) }}" method="POST">
+                            <form action="{{ route('admin.setWriter', compact('user')) }}" method="POST" class="text-articles">
                                 @csrf
                                 @method('patch')
-                                <button type="submit" class="btn btn-info text-white">Attiva {{$role}}</button>
+                                <button type="submit" class="btn btn-info text-white text-articles ">Attiva {{$role}}</button>
                             </form>
                             @break
                             

@@ -9,7 +9,7 @@
               </div>
               <div class="col-md-4">
                 <div class="card shadow-lg">
-                    <div class="card-header">
+                    <div class="card-header text-articles">
                         Registrati
                     </div>
                     <div class="card-body">
@@ -17,7 +17,7 @@
                             @csrf
                             <div class="row g-3">
                                 <div class="col-12">
-                                    <label for="name">
+                                    <label for="name" class="text-articles">
                                         <i class="fa-solid fa-person-half-dress fa-xs"></i>
                                         Nome
                                     </label>
@@ -25,7 +25,7 @@
                                     @error('name') <span class="text-danger small"> {{ $message }} </span>@enderror
                                 </div>
                                 <div class="col-12">
-                                    <label for="email">
+                                    <label for="email" class="text-articles">
                                         <i class="fa-regular fa-envelope fa-xs"></i>
                                         Email
                                     </label>
@@ -33,7 +33,7 @@
                                     @error('email') <span class="text-danger small"> {{ $message }} </span>@enderror
                                 </div>
                                 <div class="col-12">
-                                    <label for="password">
+                                    <label for="password" class="text-articles">
                                         <i class="fa-solid fa-key fa-xs"></i>
                                         Password
                                     </label>
@@ -41,7 +41,7 @@
                                     @error('password') <span class="text-danger small"> {{ $message }} </span>@enderror
                                 </div>
                                 <div class="col-12">
-                                    <label for="password_confirmation">
+                                    <label for="password_confirmation" class="text-articles">
                                         <i class="fa-solid fa-key fa-xs"></i>
                                         Conferma Password
                                     </label>
@@ -49,8 +49,8 @@
                                     @error('password') <span class="text-danger small"> {{ $message }} </span>@enderror
                                 </div>
                                 <div class="col-12">
-                                    <button type="submit" class="btn btn-primary">Registrati</button>
-                                    <p class="small mt-2">Se sei già registrato <a href="{{route('login')}}"> Clicca qui!</a> </p>
+                                    <button type="submit" class="btn btn-primary text-articles">Registrati</button>
+                                    <p class="small mt-2 text-articles">Se sei già registrato <a href="{{route('login')}}"> Clicca qui!</a> </p>
                                 </div>
                             </div>
                         </form>

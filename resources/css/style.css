@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Sora:wght@100..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Sora:wght@100..800&family=Workbench&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
 .navbar-text {
     font-family: "Workbench", sans-serif;
@@ -10,6 +11,10 @@
     font-variation-settings:
       "BLED" 0,
       "SCAN" 0;
+  }
+
+  .text-articles {
+    font-family: "Roboto Condensed", sans-serif;
   }
 
 .my-font-title {
@@ -32,6 +37,26 @@
     padding: 50px;
   }
 
+  .navbar-background {
+    background-image: url('/storage/app/public/images/banner-img.png');
+    background-size: cover;
+    background-position: center;
+  }
+
+
+  .navbar-toggler-icon {
+    background-color: whitesmoke; /* Cambia il colore dell'hamburger a rosso */
+  }
+
+  .navbar-toggler {
+    background-color: whitesmoke; /* Cambia il colore dell'hamburger a rosso */
+  }
+
+  .navbar .dropdown-toggle::after {
+    border-top-color: whitesmoke; /* Cambia il colore della freccia verso il basso a rosso */
+  }
+
+
 .custom-width {
     width: 75%;
 }
@@ -53,4 +78,21 @@ background-color: whitesmoke;
 
 
 
+@media (max-width: 768px) { /* Imposta lo sfondo trasparente solo quando la larghezza dello schermo è inferiore a 768px (modalità mobile) */
+    .navbar .dropdown-menu{
+      background-color: rgba(0, 0, 0, 0); /* Imposta il colore di sfondo trasparente */
+    }
 
+    .navbar .dropdown-menu a,
+    .navbar .dropdown-menu .dropdown-item,
+    .navbar .dropdown-menu .custom-exit-btn {
+        color: white; /* Imposta il colore del testo su bianco */
+      }
+
+      .navbar .dropdown-menu a:hover,
+      .navbar .dropdown-menu .dropdown-item:hover,
+      .navbar .dropdown-menu .custom-exit-btn:hover {
+        color: white; /* Imposta il colore del testo al passaggio del mouse su nero */
+        background-color: rgba(0, 0, 0, 0); /* Imposta il colore di sfondo al passaggio del mouse su bianco */
+      }
+  }

@@ -1,6 +1,6 @@
 <x-layout>
 
-    <div class="container-fluid p-0 position-relative">
+    <div class="container-fluid p-0 position-relative mt-5">
         <img src="{{ asset('images/banner-bg.png') }}" alt="The Aulab Post Background" class="img-fluid w-100">
         <div class="position-absolute top-50 start-50 translate-middle" style="width: 75%;">
             <img src="{{ asset('images/banner-img.png') }}" alt="The Aulab Post" class="img-fluid">
