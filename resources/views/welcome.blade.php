@@ -12,12 +12,12 @@
     <div class="fs-1 text-center text-dark mt-2">Ultimi articoli</div>
     <div class="container mt-3">
         @foreach($articles as $article)
-        <div class="row">
+        <div class="row mb-4">
             <div class="col-lg-8 col-sm-12">
                 <img src="{{Storage::url($article->image)}}" class="img-fluid w-100 my-height mb-2" alt="Article Image">
                 <p class="text-muted mt-2">Scritto il {{$article->created_at->format('d/m/Y')}}</p>
                 <h2 class="fs-4">{{$article->title}}</h2>
-                <h3 class="fs-5">{{$article->subtitle}}</h3>
+                <h3 class="fs-5">{{ucfirst($article->subtitle)}}</h3>
                 @if($article->category)
                 <a href="{{ route('article.byCategory', ['category' => $article->category->id]) }}" class="text-muted fst-italic text-capitalize text-decoration-none">{{$article->category->name}}</a>
                 @else

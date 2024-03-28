@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Sora:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Sora:wght@100..800&family=Workbench&display=swap');
+
+.navbar-text {
+    font-family: "Workbench", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "BLED" 0,
+      "SCAN" 0;
+  }
 
 .my-font-title {
     font-family: "Permanent Marker", cursive;
@@ -40,67 +51,6 @@ background-color: whitesmoke;
     color: white;
 }
 
-div.img {
-    border: 2px solid white;
-    float: left;
-    margin: 10px;
-    width: 100px;
-    height: 100px;
-}
-
-.zoom-on-hover {
-    transition: transform 0.3s;
-}
-
-.zoom-on-hover:hover {
-    transform: scale(1.05);
-}
-
-@keyframes slideInOblique {
-    0% {
-        opacity: 0;
-        transform: translateX(-100px) translateY(100px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0) translateY(0);
-    }
-}
-
-.animate-on-load .col-md-3 {
-    animation: slideInOblique 0.5s ease-out forwards;
-}
-
-.center-image {
-    max-width: auto;
-    max-height: 600px;
-    width: 100%;
-    height: auto;
-}
-
-.image-with-text {
-    font-size: 6rem;
-    font-weight: bold;
-    color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.image-with-text-login-register {
-    font-size: 4rem;
-    font-weight: bold;
-    color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.my-height {
-    max-height: 50%;
-}
 
 
 

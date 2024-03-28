@@ -17,12 +17,18 @@
                             @csrf
                             <div class="row g-3">
                                 <div class="col-12 text-start">
-                                    <label for="email">Email</label>
+                                    <label for="email">
+                                        <i class="fa-regular fa-envelope fa-xs"></i>
+                                        Email
+                                    </label>
                                     <input type="email" name="email" id="email" value="{{old ('email')}}" class="form-control">
                                     @error('email') <span class="text-danger small"> {{ $message }} </span>@enderror
                                 </div>
                                 <div class="col-12 text-start">
-                                    <label for="password">Password</label>
+                                    <label for="password">
+                                        <i class="fa-solid fa-key fa-xs"></i>
+                                        Password
+                                    </label>
                                     <input type="password" name="password" id="password" class="form-control">
                                     @error('password') <span class="text-danger small"> {{ $message }} </span>@enderror
                                 </div>

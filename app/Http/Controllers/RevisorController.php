@@ -21,21 +21,21 @@ class RevisorController extends Controller
         $article->is_accepted = true;
         $article->save();
 
-        return redirect(route('revisor.dashboard'))->with('message', 'Articolo accettato');
+        return redirect(route('revisor.dashboard'))->with('success', 'Articolo accettato');
     }
 
     public function rejectArticle(Article $article) {
         $article->is_accepted = false;
         $article->save();
 
-        return redirect(route('revisor.dashboard'))->with('message', 'Articolo rifiutato');
+        return redirect(route('revisor.dashboard'))->with('danger', 'Articolo rifiutato');
     }
 
     public function undoArticle(Article $article) {
         $article->is_accepted = NULL;
         $article->save();
 
-        return redirect(route('revisor.dashboard'))->with('message', 'Articolo spostato in revisione');
+        return redirect(route('revisor.dashboard'))->with('warning', 'Articolo spostato in revisione');
     }
 
     

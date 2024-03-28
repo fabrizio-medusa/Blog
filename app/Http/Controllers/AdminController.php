@@ -24,7 +24,7 @@ class AdminController extends Controller
         $user->is_admin = true;
         $user->save();
 
-        return redirect(route('admin.dashboard'))->with('message', 'Hai correttamente reso amministratore l\'utente scelto');
+        return redirect(route('admin.dashboard'))->with('success', 'Hai correttamente reso amministratore l\'utente scelto');
     }
 
     public function setRevisor(User $user){
@@ -32,7 +32,7 @@ class AdminController extends Controller
         $user->is_revisor = true;
         $user->save();
 
-        return redirect(route('admin.dashboard'))->with('message', 'Hai correttamente reso revisore l\'utente scelto');
+        return redirect(route('admin.dashboard'))->with('success', 'Hai correttamente reso revisore l\'utente scelto');
     }
 
     public function setWriter(User $user){
@@ -40,7 +40,7 @@ class AdminController extends Controller
         $user->is_writer = true;
         $user->save();
 
-        return redirect(route('admin.dashboard'))->with('message', 'Hai correttamente reso redattore l\'utente scelto');
+        return redirect(route('admin.dashboard'))->with('success', 'Hai correttamente reso redattore l\'utente scelto');
     }
 
     public function editTag(Request $request, Tag $tag){
@@ -62,7 +62,7 @@ class AdminController extends Controller
 
         $tag->delete();
 
-        return redirect(route('admin.dashboard'))->with('success', 'Tag eliminato');
+        return redirect(route('admin.dashboard'))->with('danger', 'Tag eliminato');
     }
 
     public function editCategory(Request $request, Category $category){
@@ -81,7 +81,7 @@ class AdminController extends Controller
 
         $category->delete();
 
-        return redirect(route('admin.dashboard'))->with('success', 'Categoria eliminata');
+        return redirect(route('admin.dashboard'))->with('danger', 'Categoria eliminata');
     }
 
     public function storeCategory(Request $request){

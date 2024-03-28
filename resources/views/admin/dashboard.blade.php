@@ -10,14 +10,11 @@
         </div>
     </div>
     
-
-    @if(session('message'))
-        <div class="alert alert-success text-center">
-            {{session('message')}}
-        </div>
-    @endif
-
+    
     <div class="container my-5">
+        <x-success />
+        <x-warning />
+        <x-danger />
         <div class="row justify-content-center">
             <div class="col-12">
                 <h2>Richieste per ruolo amministratore</h2>
