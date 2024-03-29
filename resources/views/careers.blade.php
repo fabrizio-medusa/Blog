@@ -8,8 +8,9 @@
             <span class="display-4 my-font-title">Lavora con noi</span>
         </div>
     </div>
-
+    
     <div class="container my-5">
+        <x-success />
         <div class="row justify-content-center align-items-center border rounded p-2 shadow">
             <div class="col-12 col-md-6">
                 <h2 class="text-articles">Lavora come amministratore</h2>
