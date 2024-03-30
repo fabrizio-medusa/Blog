@@ -43,6 +43,16 @@ class AdminController extends Controller
         return redirect(route('admin.dashboard'))->with('success', 'Hai correttamente reso redattore l\'utente scelto');
     }
 
+    public function rejectRequest(User $user)
+    {
+        $user->is_admin = false;
+        $user->is_revisor = false;
+        $user->is_writer = false;
+        $user->save();
+
+        return redirect(route('admin.dashboard'))->with('danger', 'Richiesta rifiutata');
+    }
+
     public function editTag(Request $request, Tag $tag){
         $request->validate([
             'name' => 'required|unique:tags',
@@ -54,6 +64,7 @@ class AdminController extends Controller
 
         return redirect(route('admin.dashboard'))->with('success', 'Tag aggiornato');
     }
+
 
     public function deleteTag(Tag $tag){
         foreach($tag->articles as $article){

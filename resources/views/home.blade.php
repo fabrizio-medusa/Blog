@@ -1,7 +1,7 @@
 <x-layout>
     <div class="container mt-5">
         <div class="row">
-            <h2 class="text-black mt-5">Ciao <strong>{{ auth()->user()->name }}</strong></h2>
+            <h2 class="text-black mt-5">Ciao <strong>{{ ucfirst(auth()->user()->name) }}</strong></h2>
                 <x-success />
                 <x-danger />
 

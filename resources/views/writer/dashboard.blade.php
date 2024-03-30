@@ -10,30 +10,36 @@
         </div>
     </div>
 
-    <div class="container my-5">
+    <div class="container mt-5">
         <x-success />
         <x-warning />
         <x-danger />
-        <div class="row justify-content-center">
+        <div class="row justify-content-center ">
             <div class="col-12">
                 <h2>Articoli in fase di revisione</h2>
-                <x-writer-articles-table :articles="$unrevisionedArticles"/>
+                    <div class="table-responsive">
+                        <x-writer-articles-table :articles="$unrevisionedArticles"/>   
+                    </div>
             </div>
         </div>
     </div>
-    <div class="container my-5">
-        <div class="row justify-content-center">
-            <div class="col-12">
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12">
                 <h2>Articoli pubblicati</h2>
-                <x-writer-articles-table :articles="$acceptedArticles"/>
+                    <div class="table-responsive">
+                        <x-writer-articles-table :articles="$acceptedArticles"/>  
+                    </div>
             </div>
         </div>
     </div>
-    <div class="container my-5">
-        <div class="row justify-content-center">
+    <div class="container-sm my-5">
+        <div class="row">
             <div class="col-12">
                 <h2>Articoli respinti</h2>
-                <x-writer-articles-table :articles="$rejectedArticles"/>
+                    <div class="table-responsive">
+                        <x-writer-articles-table :articles="$rejectedArticles"/>  
+                    </div>
             </div>
         </div>
     </div>
