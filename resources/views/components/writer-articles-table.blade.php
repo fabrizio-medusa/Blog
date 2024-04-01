@@ -28,6 +28,7 @@
                     <a href="{{route('article.edit', compact('article'))}}" class="btn btn-warning text-white mt-1"><i class="fa-solid fa-pen-to-square" data-bs-toggle="tooltip" data-bs-placement="top" title="Modifica articolo"></i></a>
                     <form action="{{route('article.destroy', compact('article'))}}" method="POST" class="d-inline">
                         @csrf
+                        @method('DELETE')
                         <button class="btn btn-danger mt-1" type="submit"><i class="fa-solid fa-trash-can-arrow-up" data-bs-toggle="tooltip" data-bs-placement="top" title="Elimina articolo"></i></button>
                     </form>
                 </td>
