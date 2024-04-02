@@ -39,11 +39,11 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-12">
-                        <div class="width-100"><img src="{{ asset('images/img-profilo.jpg') }}" class="img-fluid max-height-100" alt="Image 5" style="max-height: 250px"></div>
+                        <div class="width-100"><img src="{{ asset('storage/profile_images/' . $article->user->profile_image) }}" class="img-fluid max-height-100" alt="Image 5" style="max-height: 150px"></div>
                         <h1 class="text-primary"><a href="{{ route('article.byUser', ['user' => $article->user->id]) }}" class="text-muted fst-italic text-capitalize fs-5 text-decoration-none text-articles">Redattore:
                             {{$article->user->name}}
                         </a></h1>
-                        <p class="text-muted text-articles">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis</p>
+                        <p class="text-muted text-articles">{{ $article->user->description ?? 'Nessuna descrizione disponibile' }}</p>
                         <div class="d-flex justify-content-between mt-4">
                             <ul class="list-unstyled d-flex">
                                 <li class="me-2"><a href="#"><i class="fa-brands fa-facebook fa-lg"></i></a></li>

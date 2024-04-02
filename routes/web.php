@@ -6,6 +6,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\WriterController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RevisorController;
 
 /*
@@ -38,6 +39,8 @@ Route::get('categories/index', function () {
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/home', [HomeController::class, 'index'])->name('home');
+    Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::put('/profile/update', [ProfileController::class, 'update'])->name('profile.update');
     
 });
 

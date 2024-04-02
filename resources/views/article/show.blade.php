@@ -27,7 +27,17 @@
                 <hr>
                 <p>{{$article->body}}</p>
                 <div class="text-center">
-                    <a href="{{route('revisor.dashboard')}}" class="btn btn-info text-white my-5"><i class="fa-solid fa-backward" data-bs-toggle="tooltip" data-bs-placement="top" title="Torna indietro"></i></a>
+                    @if (Auth::check())
+                        @if (Auth::user()->is_revisor)
+                            <a href="{{ route('revisor.dashboard') }}" class="btn btn-info text-white my-5"><i class="fa-solid fa-backward" data-bs-toggle="tooltip" data-bs-placement="top" title="Torna indietro"></i></a>
+                        @elseif (Auth::user()->is_admin)
+                            <a href="{{ route('homepage') }}" class="btn btn-info text-white my-5"><i class="fa-solid fa-backward" data-bs-toggle="tooltip" data-bs-placement="top" title="Torna indietro"></i></a>
+                        @else
+                            <a href="{{ route('writer.dashboard') }}" class="btn btn-info text-white my-5"><i class="fa-solid fa-backward" data-bs-toggle="tooltip" data-bs-placement="top" title="Torna indietro"></i></a>
+                        @endif
+                        @else
+                        <a href="{{ route('homepage') }}" class="btn btn-info text-white my-5"><i class="fa-solid fa-backward" data-bs-toggle="tooltip" data-bs-placement="top" title="Torna indietro"></i></a>
+                    @endif
                 </div>
                 <div class="d-flex justify-content-between ">
                     @if (Auth::user() && Auth::user()->is_revisor)

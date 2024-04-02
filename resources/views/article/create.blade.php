@@ -4,7 +4,7 @@
           <div class="col-sm-12">
             <div class="row justify-content-center second-container align-items-center"> 
               <div class="col-md-5">
-                <h1 class="display-4 my-font-title text-white">Crea un nuovo articolo</h1>
+                <h1 class="display-4 my-font-title text-white text-center">Crea un nuovo articolo</h1>
               </div>
 
         

@@ -29,6 +29,8 @@
                       <li><hr class="dropdown-divider"></li>
                     @endif
                     @if(Auth::user()->is_writer)
+                      <li><a class="dropdown-item my-font-title" href=" {{ route ('profile.edit') }} ">Profilo</a></li>
+                      <li><hr class="dropdown-divider"></li>
                       <li><a class="dropdown-item my-font-title" href=" {{ route ('writer.dashboard') }} ">Dashboard del redattore</a></li>
                       <li><hr class="dropdown-divider"></li>
                       <li><a class="dropdown-item my-font-title"
